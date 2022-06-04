@@ -1,0 +1,16 @@
+﻿@{
+    List <string> Categories = new();
+    foreach(var obj in ViewBag.objList)
+    {
+        Categories.Add(obj.Category);
+    }
+}
+
+<nav class="collapse navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
+    <div class="navbar-nav w-100 overflow-hidden">
+        @foreach(var cat in Categories.Distinct())
+        {
+            <a href="/EShopper/Category/@cat" class="nav-item nav-link">@cat</a>
+        }
+    </div>
+</nav>

@@ -1,0 +1,24 @@
+﻿@page
+@model ResetAuthenticatorModel
+@{
+    ViewData["Title"] = "Redefinir chave autenticadora";
+    ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+}
+
+<partial name="_StatusMessage" for="StatusMessage" />
+<h3>@ViewData["Title"]</h3>
+<div class="alert alert-warning" role="alert">
+    <p>
+        <span class="glyphicon glyphicon-warning-sign"></span>
+        <strong>Se você redefinir sua chave autenticadora, seu app autenticador não vai funcionar até que você o reconfigure.</strong>
+    </p>
+    <p>
+        Este processo desabilita 2FA até que você verifique seu app autenticador.
+        Se você não completar a configuração de seu app autenticador, você pode perder o acesso à conta.
+    </p>
+</div>
+<div>
+    <form id="reset-authenticator-form" method="post">
+        <button id="reset-authenticator-button" class="btn btn-danger" type="submit">Redefinir chave autenticadora</button>
+    </form>
+</div>

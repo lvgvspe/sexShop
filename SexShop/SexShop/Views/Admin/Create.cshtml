@@ -1,0 +1,42 @@
+﻿@model ProductModel
+
+<form method="POST">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Adicionar produto</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Price"></label>
+            <input asp-for="Price" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Quantity"></label>
+            <input asp-for="Quantity" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Image"></label>
+            <input asp-for="Image" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Category"></label>
+            <input asp-for="Category" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Barcode"></label>
+            <input asp-for="Barcode" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 200px;">Criar</button>
+        <a asp-action="Index" class="btn btn-primary" style="width: 200px;">
+            Voltar
+        </a>
+    </div>
+</form>
